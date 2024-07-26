@@ -1,0 +1,11 @@
+camelot-py[cv]
+PyPDF2==2.12.1
+tabula-py
+jpype1
+pdfplumber
+llama-index-core
+llama-parse
+llama-index-readers-file
+python-dotenv
+llmwhisperer-client
+unstructured-client
