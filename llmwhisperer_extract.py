@@ -21,7 +21,7 @@ def main():
         error_exit("No file provided")
     file_path = sys.argv[1]
     if "Apple_10-Q" in file_path:
-        extracted_text = extract_text_from_pdf(file_path, pages_list=[13])
+        extracted_text = extract_text_from_pdf(file_path, pages_list=[14])
     else:
         extracted_text = extract_text_from_pdf(file_path)
 

@@ -9,12 +9,18 @@ def main():
     # Open the PDF file
     with pdfplumber.open(sys.argv[1]) as pdf:
         # Go through each page
-        for page in pdf.pages:
+        if "Apple_10-Q" in sys.argv[1]:
+            pdf_pages = [pdf.pages[13]]
+        else:
+            pdf_pages = pdf.pages
+        for page in pdf_pages:
             # Get tables from the current page
-            tables = page.extract_table()
+            table = page.extract_table()
 
             # Print the table data
-            print(tables)
+            if table:
+                for row in table:
+                    print(row)
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
